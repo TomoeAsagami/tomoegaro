@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	
+	<script src="./js/calendar.js"></script>
+	<script src="./js/jquery-3.4.1.js"></script>
+	<style>
+		.error {
+			color : red;
+		}
+	</style>
+	<script>
+		"use strict";
+		var a = 2;
+		var b = 2;
+		var c = "文字列"
+		console.log(a);
+		//alert(a);
+		//alert(b);
+
+		if (a===1) {
+			console.log("aは1です。");
+		}
+		else if (a===2) {
+			console.log("aは2です。");
+		}
+		else {
+			console.log("aはその他です。");
+		}
+		
+		var list = ["1", "2", "3"];
+		console.log(list);
+		console.log(list[1]);
+		
+		for (var i = 0; i < list.length; i++) {
+			console.log(list[i]);
+		}
+		
+		//document.write("aaaaaa");
+		//document.write("<br><strong>aaaaaa</strong>")
+		
+	</script>
+	<script>
+		function check(){
+			if (!document.testform.name.value) {
+				alert("エラーメッセージ");
+			}
+			if (!document.testform.name.value) {
+				//document.getElementById("name_error").innerHTML=
+				$("#name_error").html("お名前を入力してください");
+			} else {
+				$("#name_error").html("");
+			}
+			
+			if (!$("#job_select").val()) {
+				$("#job_error").html("職業を選択してください");
+			} else {
+				$("#job_error").html();
+			}
+		}
+	</script>
+		<title>木間塚 政人のホームページ</title>
+	</head>
+	<body>
+	<div style="text-align:center">
+	<h1>木間塚 政人のホームページ</h1>
+	<h3>めんそ～れ！</h3></div>
+		<center><table border=1>
+			<tr>
+				<td>名前</td>
+				<td>木間塚 政人</td>
+			</tr>
+			<tr>
+				<td>Name</td>
+				<td>Kimatsuka, Masato</td>
+			</tr>
+			<tr>
+				<td>趣味</td>
+				<td>サッカー観戦、登山、写真</td>
+			</tr>
+		</table></center>
+	<br><br>
+	<center><a href="pict.html">
+	<img src="main.jpg" width="30%" height="30%"><br>
+	木間塚写真館</a></center>
+	<br>
+	<hr width = "90%">
+
+
+	<center><h2>2020新卒採用エントリーフォーム</h2></center>
+	<center><form action="pict.html" method="post" name="testform">
+		<p>
+		<div id ="name_error" class="error"></div>
+		お名前：<input type ="text" name ="name"/>
+		</p>
+		<p>
+		性別：<input type ="radio" name ="sex" value ="male">男
+		<input type ="radio" name ="sex" value ="female">女
+		</p>
+		<p>
+		職業：
+		<div id="job_error" class="error"></div>
+		<select name ="job" id ="job_select">
+		<option value =""></option>
+		<option value ="1">会社員</option>
+		<option value ="2">学生</option>
+		<option value ="3">フリーター<option>
+		</select>
+		</p>
+		<p>
+		履歴書
+		<input type ="file" name ="datafile">
+		</p>
+		<p>
+		フォーマット：
+		<input type ="radio" name ="file" value ="word">word
+		<input type ="radio" name ="file" value ="txt">txt
+		<input type ="radio" name ="file" value ="excel">excel
+		　開封パスワード：<input type ="password" name ="pass">
+		</p>
+		<p>
+		志望動機：
+		<textarea name ="douki" rows ="4" cols="40"></textarea>
+		</p>
+		<p>
+		<input type ="checkbox" name ="kakunin" value ="ok">
+		私はロボットではありません
+		</p>
+		<p>
+		<input type ="button" value ="送信" onclick="check();"/>
+		<input type ="reset" value ="リセット">
+		</p>
+	</form></center>
+	</body>
+</html>
