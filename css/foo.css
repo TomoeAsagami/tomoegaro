@@ -1,0 +1,27 @@
+ul.foo {
+    display:table;
+    table-layout:fixed;
+    /*width:500px; 
+    padding-bottom: 40px; */
+}
+ul.foo li {
+    display:table-cell;
+    vertical-align:middle;
+    text-align:center;
+    padding: 0.1em 0.5em;
+    text-decoration: none;
+    background: #FFF;/*ボタン色*/
+    color: #FFF;
+    border-bottom: solid 2px #627295;
+    /*background-color:red;
+    border-left:1px solid white; */
+}
+  
+/* ul.foo li:first-child {
+    border:none;    
+}
+ul.foo li a {
+    display:block;
+    text-decoration:none;
+    color:white;
+} */
